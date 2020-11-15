@@ -39,7 +39,7 @@ class AcountHolder(ABC):
     def __init__(self, id: int, email: str):
         self._email = email
         self._id = id
-        self._acounts: List[Acount]
+        self._acounts = List[Acount]
 
 
 class IndividualHolder(AcountHolder):
@@ -54,4 +54,4 @@ class CorporateHolder(AcountHolder):
 
     def __init__(self, id: int, email: str, contact: str):
         super().__init__(id, email)
-        self.contact = contact
+        self._contact = contact
